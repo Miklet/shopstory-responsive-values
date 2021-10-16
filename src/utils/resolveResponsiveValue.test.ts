@@ -1,5 +1,5 @@
 import { resolveResponsiveValue } from './resolveResponsiveValue';
-import { ResponsiveValue, ResponsiveValueArray, TestCase } from './types';
+import { ResponsiveValue, ResponsiveValueArray, TestCase } from '../types';
 
 test.each`
   input                              | output

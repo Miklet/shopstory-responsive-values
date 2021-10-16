@@ -1,4 +1,4 @@
-import { ResponsiveValue, ResponsiveValueArray } from './types';
+import { ResponsiveValue, ResponsiveValueArray } from '../types';
 
 function resolveResponsiveValue<Values>(
   responsiveValue: ResponsiveValue<Values>,

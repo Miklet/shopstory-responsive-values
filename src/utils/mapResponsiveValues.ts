@@ -1,5 +1,5 @@
 import { getResponsiveValueLength } from '.';
-import { resolveResponsiveValue } from '../resolveResponsiveValue';
+import { resolveResponsiveValue } from './resolveResponsiveValue';
 import { ResponsiveValue } from '../types';
 
 type UnwrapValue<
