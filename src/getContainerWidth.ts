@@ -6,15 +6,16 @@ function getContainerWidth(
   isSnappedToEdge: ResponsiveValue<boolean>
 ): ResponsiveValue<string> {
   const result = mapResponsiveValues(
+    (containerMargin, isSnappedToEdge): string => {
+      if (isSnappedToEdge) {
+        return '100%';
+      }
+
+      return `calc(100% - ${containerMargin / 2}px)`;
+    },
     containerMargin,
     isSnappedToEdge
-  )((containerMargin, isSnappedToEdge) => {
-    if (isSnappedToEdge) {
-      return '100%';
-    }
-
-    return `calc(100% - ${containerMargin / 2}px)`;
-  }) as Array<string>;
+  );
 
   return normalizeResponsiveValue(result);
 }

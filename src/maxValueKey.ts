@@ -7,8 +7,7 @@ type InputObject = {
 
 
 function maxValueKey(responsiveValue: ResponsiveValue<InputObject>) : ResponsiveValue<string>  {
-  // @ts-ignore
-  const result = mapResponsiveValues(responsiveValue)(getMaxKeyFromObject) as Array<string>;
+  const result = mapResponsiveValues(getMaxKeyFromObject, responsiveValue);
   return normalizeResponsiveValue(result);
 }
 
