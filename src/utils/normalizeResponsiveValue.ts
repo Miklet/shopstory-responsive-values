@@ -1,8 +1,8 @@
-import { ResponsiveValueArray } from './types';
+import { ResponsiveValue, ResponsiveValueArray } from '../types';
 
 function normalizeResponsiveValue<T>(
   responsiveValue: ReadonlyArray<T>
-): Array<T | null> | T {
+): ResponsiveValue<T> {
   const normalizedResult: ResponsiveValueArray<T | null> = [responsiveValue[0]];
 
   for (let index = 1; index < responsiveValue.length; index++) {

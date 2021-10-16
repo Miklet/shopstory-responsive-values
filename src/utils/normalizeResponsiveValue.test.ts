@@ -1,5 +1,5 @@
 import { normalizeResponsiveValue } from './normalizeResponsiveValue';
-import type { TestCase } from './types';
+import type { TestCase } from '../types';
 
 test.each`
   input                                                         | output
