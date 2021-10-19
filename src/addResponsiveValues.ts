@@ -2,9 +2,12 @@ import { ResponsiveValue } from './types';
 import { mapResponsiveValues } from './utils';
 
 function addResponsiveValues(
-  ...responsiveValues: [ResponsiveValue<number>, ResponsiveValue<number>]
+  ...responsiveValues: Array<ResponsiveValue<number>>
 ): Array<number> {
-  const result = mapResponsiveValues((v1, v2) => v1 + v2, ...responsiveValues);
+  const result = mapResponsiveValues(
+    (...values) => values.reduce((sum, value) => sum + value),
+    ...responsiveValues
+  );
   return result;
 }
 
