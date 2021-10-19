@@ -16,8 +16,8 @@ function mapResponsiveValues<
     }
   ) => any
 >(
-  mapperFn: MapFn,
-  ...responsiveValues: ResponsiveValues
+  responsiveValues: ResponsiveValues,
+  mapperFn: MapFn
 ): Array<ReturnType<MapFn>> {
   const maxResponsiveValueLength = Math.max(
     ...responsiveValues.map(responsiveValue =>
